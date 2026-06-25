@@ -155,5 +155,28 @@ pip install torch torchvision transformers opencv-python easyocr sentence-transf
 
 Убедитесь, что датасет находится в /content/drive/MyDrive/memes_toxic_dataset_1000 ИЛИ загрузите датасет из HF - irgsv/russian_toxic_memes
 
+Скрипт для загрузки картинок себе на шару
+
+```bash
+from google.colab import drive
+drive.mount('/content/drive')
+!pip install datasets -q
+from datasets import load_dataset
+from PIL import Image
+import os
+from tqdm import tqdm
+# Загружаем датасет
+dataset = load_dataset("irgsv/russian_toxic_memes", split="train")
+# Путь для сохранения
+SAVE_DIR = "/content/drive/MyDrive/memes_toxic_dataset_1000"
+os.makedirs(SAVE_DIR, exist_ok=True)
+# Сохраняем все изображения
+for idx, example in enumerate(tqdm(dataset)):
+    image = example['image']
+    if image.mode == 'RGBA':
+        image = image.convert('RGB')
+    image.save(os.path.join(SAVE_DIR, f"{idx:04d}.jpg"), 'JPEG', quality=95)
+```
+
 Запустите все ячейки последовательно
 
