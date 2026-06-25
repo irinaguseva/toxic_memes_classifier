@@ -52,7 +52,7 @@
 
 ## Данные
 
-- **Источник:** собранный датасет русскоязычных мемов irgsv/russian_toxic_memes
+- **Источник:** собранный датасет русскоязычных мемов https://huggingface.co/datasets/irgsv/russian_toxic_memes
 - **Объём:** ~1000 изображений
 - **Метки:** бинарная классификация (0 — не токсичный, 1 — токсичный)
 - **Формат имён файлов:** `{filename}_{label}.{ext}`, где метка — первый символ после подчёркивания
@@ -153,7 +153,7 @@ pip install torch torchvision transformers opencv-python easyocr sentence-transf
 
 Подключите Google Drive: см. код в ноутбуке
 
-Убедитесь, что датасет находится в /content/drive/MyDrive/memes_toxic_dataset_1000 ИЛИ загрузите датасет из HF
+Убедитесь, что датасет находится в /content/drive/MyDrive/memes_toxic_dataset_1000 ИЛИ загрузите датасет из HF - irgsv/russian_toxic_memes
 
 Запустите все ячейки последовательно
 
