@@ -1,5 +1,4 @@
-# toxic_memes_classifier
-# 🧠 Meme Toxicity Classifier
+# Meme Toxicity Classifier
 
 
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/8c9415ea-4fce-4fee-98c1-898e72dea093" />
